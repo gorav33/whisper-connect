@@ -57,6 +57,15 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        chat: {
+          sent: "hsl(var(--chat-sent))",
+          "sent-foreground": "hsl(var(--chat-sent-foreground))",
+          received: "hsl(var(--chat-received))",
+          "received-foreground": "hsl(var(--chat-received-foreground))",
+          online: "hsl(var(--chat-online))",
+          offline: "hsl(var(--chat-offline))",
+          typing: "hsl(var(--chat-typing))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +89,25 @@ export default {
             height: "0",
           },
         },
+        "fade-in": {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "slide-in": {
+          "0%": { opacity: "0", transform: "translateX(-10px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        "message-in": {
+          "0%": { opacity: "0", transform: "scale(0.95) translateY(10px)" },
+          "100%": { opacity: "1", transform: "scale(1) translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.3s ease-out",
+        "slide-in": "slide-in 0.2s ease-out",
+        "message-in": "message-in 0.2s ease-out",
       },
     },
   },
